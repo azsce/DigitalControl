@@ -1,6 +1,6 @@
 ---
 id: signal_types
-title: Signal Types: Analog vs. Digital
+title: "Signal Types: Analog vs. Digital"
 sidebar_position: 3
 ---
 
