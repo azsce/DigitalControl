@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Markdown from "@/component/Markdown";
-import Presentation from "@/component/Presentation";
 
 const LectureIntroduction = () => {
   const [markdown, setMarkdown] = useState("");
@@ -14,8 +13,7 @@ const LectureIntroduction = () => {
   }, []);
 
   return (
-    // <Markdown markdown={markdown} />
-    <Presentation markdown={markdown} />
+    <Markdown markdown={markdown} />
   );
 };
 
