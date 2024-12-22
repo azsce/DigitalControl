@@ -4,8 +4,6 @@ title: Course Content
 sidebar_position: 1
 ---
 
-## Course Content
-
 The course will cover a comprehensive range of topics related to digital control systems, including:
 - Introduction to continuous and discrete systems.
 - Analog-to-digital (A/D) and digital-to-analog (D/A) converters.

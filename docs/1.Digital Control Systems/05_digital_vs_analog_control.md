@@ -4,8 +4,6 @@ title: Digital Control vs. Automatic (Analog) Control
 sidebar_position: 5
 ---
 
-## Digital Control vs. Automatic (Analog) Control
-
 ### Automatic Control Systems:
 - Traditionally used analog controllers $D(s)$.
 - Output control signal $u(t)$ based on the error signal $e(t)$.

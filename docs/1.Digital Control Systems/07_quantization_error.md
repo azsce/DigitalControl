@@ -4,8 +4,6 @@ title: Quantization Error and Resolution
 sidebar_position: 7
 ---
 
-## Quantization Error and Resolution
-
 ### Quantization Error:
 The difference between the actual analog value and its corresponding digital representation.
 
@@ -65,6 +63,8 @@ An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 1. **Quantization Level:** $q = \frac{20 V}{2^3} = \frac{20 V}{8} = 2.5 V$
 2. **Quantization Table:** The decimal values and their binary representations are:
 
+<div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+
 | Decimal | Binary |
 |:---:|:---:|
 | 1.25 | 000 |
@@ -76,4 +76,6 @@ An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 | 16.25 | 110 |
 | 18.75 | 111 |
 
-3. **Binary Output:** 5.325 volts falls between 3.75 volts and 6.25 volts on the quantization table, so the converter will output 010.
+</div>
+
+1. **Binary Output:** 5.325 volts falls between 3.75 volts and 6.25 volts on the quantization table, so the converter will output 010.

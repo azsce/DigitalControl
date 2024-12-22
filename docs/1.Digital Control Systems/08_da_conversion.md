@@ -4,8 +4,6 @@ title: D/A Conversion
 sidebar_position: 8
 ---
 
-## D/A Conversion
-
 ### D/A Converter:
 Converts a digital signal into a sampled analog signal.
 

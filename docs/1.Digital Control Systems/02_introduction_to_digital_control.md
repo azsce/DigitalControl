@@ -1,10 +1,8 @@
 ---
-id: introduction_to_digital_control
-title: Introduction to Digital Control Systems
+id: intro
+title: Introduction
 sidebar_position: 2
 ---
-
-## Introduction to Digital Control Systems
 
 ### What is Digital Control?
 - A branch of control theory utilizing digital computers and controllers to regulate systems.

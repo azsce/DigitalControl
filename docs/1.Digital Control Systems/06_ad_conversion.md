@@ -1,12 +1,9 @@
 ---
 id: ad_conversion
-title: A/D Conversion
+title: A/D Converter
 sidebar_position: 6
 ---
 
-## A/D Conversion
-
-### A/D Converter:
 Transforms an analog signal into a digital signal.
 
 ### Three Key Operations:

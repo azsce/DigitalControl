@@ -4,8 +4,6 @@ title: Block Diagram of Sampled-Data System
 sidebar_position: 9
 ---
 
-## Block Diagram of Sampled-Data System
-
 ### Figure 1:
 Shows a typical closed-loop continuous time control system.
 

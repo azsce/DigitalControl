@@ -4,8 +4,6 @@ title: Continuous-Time and Discrete-Time Signals
 sidebar_position: 4
 ---
 
-## Continuous-Time and Discrete-Time Signals
-
 ### Continuous-Time Signal:
 - Value function (VF) defined over a continuous range of time.
 - Magnitude of the signal is continuous.
