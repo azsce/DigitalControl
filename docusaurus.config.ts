@@ -1,66 +1,66 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Digital Control Systems',
-  tagline: 'A website for learning digital control systems',
-  favicon: 'img/favicon.ico',
+  title: "Digital Control Systems",
+  tagline: "A website for learning digital control systems",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://azsce.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/DigitalControl/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'azsce', // Usually your GitHub org/user name.
-  projectName: 'DigitalControl', // Usually your repo name.
+  organizationName: "azsce",
+  projectName: "DigitalControl",
+  deploymentBranch: "gh-pages",
+  trailingSlash: false,
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          remarkPlugins: [require('remark-math')],
-          rehypePlugins: [require('rehype-katex')],
+          sidebarPath: "./sidebars.ts",
+          remarkPlugins: [require("remark-math")],
+          rehypePlugins: [require("rehype-katex")],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/azsce/DigitalControl/tree/main/',
+          editUrl: "https://github.com/azsce/DigitalControl/tree/main/",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/azsce/DigitalControl/',
+          editUrl: "https://github.com/azsce/DigitalControl/",
           // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -69,65 +69,65 @@ const config: Config = {
   markdown: {
     mermaid: true,
   },
-  
-  themes: ['@docusaurus/theme-mermaid'],
+
+  themes: ["@docusaurus/theme-mermaid"],
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: 'Digital Control Systems',
+      title: "Digital Control Systems",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "My Site Logo",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Tutorial",
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/azsce/DigitalControl',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/azsce/DigitalControl",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Tutorial",
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/Digital%20Control%20Systems/intro',
+              label: "Tutorial",
+              to: "/docs/Digital%20Control%20Systems/intro",
             },
           ],
         },
         {
-          title: 'Info',
+          title: "Info",
           items: [
             {
-              label: 'My GitHub',
-              href: 'https://github.com/ahmedhosnypro',
+              label: "My GitHub",
+              href: "https://github.com/ahmedhosnypro",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'GitHub',
-              href: 'https://github.com/azsce/DigitalControl',
+              label: "GitHub",
+              href: "https://github.com/azsce/DigitalControl",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Ahmed Hosny. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} AZSCE. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.vsLight,
@@ -137,10 +137,11 @@ const config: Config = {
 
   stylesheets: [
     {
-      href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
-      type: 'text/css',
-      integrity: 'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-      crossorigin: 'anonymous',
+      href: "https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
+      crossorigin: "anonymous",
     },
   ],
 };
