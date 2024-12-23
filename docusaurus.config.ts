@@ -42,7 +42,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/azsce/DigitalControl/',
+            'https://github.com/azsce/DigitalControl/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -65,6 +65,12 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  markdown: {
+    mermaid: true,
+  },
+  
+  themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
     // Replace with your project's social card
@@ -121,7 +127,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} AhmedHosnyPro. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ahmed Hosny. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.vsLight,

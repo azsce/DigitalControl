@@ -1,0 +1,8 @@
+split the file into files each has a complete logical section of this file, 
+create the files under the same dir, 
+
+its under docusaurus, 
+so make sure to number each file like 1_Title.md
+
+and also add front matter yaml for each file
+and dont delete or modifiy the original  file

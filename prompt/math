@@ -1,0 +1,23 @@
+Please help me format the mathematical notations in my Markdown files according to these rules:
+
+1. All inline math expressions should be wrapped with double dollar signs ($$...$$)
+2. All block/display math equations should be wrapped with double dollar signs and placed on separate lines:
+   $$
+   equation here
+   $$
+3. For summations, use \limits to place indices above and below the sum symbol:
+   $$
+   \sum\limits_{lower}^{upper}
+   $$
+4. Format fractions using \frac{numerator}{denominator}
+5. For special mathematical functions and operators:
+   - Use \{ and \} for set notation
+   - Greek letters should use \ prefix (e.g., \delta, \omega)
+   - Exponentials should use superscript notation (e^{power})
+   - Use \infty for infinity symbol
+
+The document uses Docusaurus with:
+remarkPlugins: [require('remark-math')],
+rehypePlugins: [require('rehype-katex')]
+
+Please modify the mathematical expressions in my document to follow these conventions while preserving the rest of the content.
