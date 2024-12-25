@@ -15,6 +15,7 @@ Please help me format the mathematical notations in my Markdown files according 
    - Greek letters should use \ prefix (e.g., \delta, \omega)
    - Exponentials should use superscript notation (e^{power})
    - Use \infty for infinity symbol
+6. Do this for content of mermaid blocks too
 
 The document uses Docusaurus with:
 remarkPlugins: [require('remark-math')],

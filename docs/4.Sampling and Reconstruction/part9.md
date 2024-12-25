@@ -12,24 +12,26 @@ Control systems often involve analog processes driven by analog inputs. Digital 
 The zero-order hold is a common method for reconstructing analog signals from a sequence of digital samples due to its simplicity and cost-effectiveness.  The objective of data reconstruction is to generate a continuous-time signal *f(t)* from a discrete sequence of numbers: *f*(0), *f*(*T*), *f*(2*T*), ..., *f*(*kT*),..., where *T* is the sampling period and *k* is an integer.
 
 **Explanation from the Lecture:**
-In the lecture, the instructor explains that for proper reconstruction, the sampling frequency (ω<sub>s</sub>) must be significantly higher than the highest frequency component (ω<sub>c</sub>) present in the original analog signal.  A common rule of thumb is to choose ω<sub>s</sub> to be at least 10 times greater than ω<sub>c</sub> (ω<sub>s</sub> > 10ω<sub>c</sub>).  This ensures that the sampled signal contains enough information to accurately represent the original signal. The hold operation is emphasized as a popular reconstruction method in control systems.
+In the lecture, the instructor explains that for proper reconstruction, the sampling frequency ($$\omega_s$$) must be significantly higher than the highest frequency component ($$\omega_c$$) present in the original analog signal.  A common rule of thumb is to choose $$\omega_s$$ to be at least 10 times greater than $$\omega_c$$ ($$\omega_s > 10\omega_c$$).  This ensures that the sampled signal contains enough information to accurately represent the original signal. The hold operation is emphasized as a popular reconstruction method in control systems.
 
 
 ### Extrapolation for Data Reconstruction
 
-The data reconstruction process can be viewed as extrapolation. The continuous signal has to be formed based on past samples, essentially predicting future values based on past behavior.  To estimate the original signal *f(t)* between two consecutive sampling instants *kT* and (*k* + 1)*T*, we utilize the values of *f(t)* at previous sampling instants: *f*((*k*-1)*T*), *f*((*k*-2)*T*),..., *f*(0).
+The data reconstruction process can be viewed as extrapolation. The continuous signal has to be formed based on past samples, essentially predicting future values based on past behavior.  To estimate the original signal $$f(t)$$ between two consecutive sampling instants $$kT$$ and $$(k + 1)T$$, we utilize the values of $$f(t)$$ at previous sampling instants: $$f((k-1)T)$$, $$f((k-2)T)$$,..., $$f(0)$$.
 
 **Explanation from the Lecture:**
 The instructor describes extrapolation as predicting the signal at a future time using the signal values at the current and previous sampling instants. This differs from interpolation, which estimates the signal *between* existing data points.  The instructor uses a hand-drawn diagram to illustrate this. The diagram depicts a series of vertical lines representing the sampled signal values at different sampling times. An arrow points forward from the most recent samples, illustrating how extrapolation extends the data beyond the last known value.  Another hand-drawn diagram illustrates extrapolation in comparison to interpolation.  It shows the known sampled points on a horizontal time axis. Interpolation fills in data between two adjacent known points. Extrapolation, in contrast, extends the signal beyond the known sampled values into the future, using the current and previous samples.
 
 A mathematical representation of this concept involves a power series expansion:
 
-*f<sub>k</sub>(t)* = *f(kT)* + *f*<sup>(1)</sup>(*kT*)(*t* - *kT*) + *f*<sup>(2)</sup>(*kT*)(*t*- *kT*)<sup>2</sup>/2! + ...
+$$
+f_k(t) = f(kT) + f^{(1)}(kT)(t - kT) + \frac{f^{(2)}(kT)(t- kT)^2}{2!} + ...
+$$
 
 where:
 
-* *f<sub>k</sub>(t)* = *f(t)* for *kT* ≤ *t* < (*k*+1)*T*
-* *f*<sup>(*n*)</sup>(*kT*) = d<sup>*n*</sup>*f(t)* / d*t*<sup>*n*</sup>|<sub>*t*=*kT*</sub> for *n* = 1, 2,...
+* $$f_k(t) = f(t)$$ for $$kT \leq t < (k+1)T$$
+* $$f^{(n)}(kT) = \left.\frac{d^n f(t)}{dt^n}\right|_{t=kT}$$ for $$n = 1, 2,...
 
 
 ### Example
