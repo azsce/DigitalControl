@@ -53,7 +53,7 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/azsce/DigitalControl/",
+          editUrl: "https://github.com/azsce/DigitalControl/tree/main/blog/",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -133,6 +133,17 @@ const config: Config = {
       theme: prismThemes.vsLight,
       darkTheme: prismThemes.synthwave84,
     },
+    mermaid: {
+      theme: { light: 'neutral', dark: 'forest' },
+      options: {
+        maxTextSize: 500,
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis'
+        }
+      },
+    },
   } satisfies Preset.ThemeConfig,
 
   stylesheets: [
@@ -143,6 +154,17 @@ const config: Config = {
         "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous",
     },
+  ],
+
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        id: 'default',
+        changefreq: 'weekly',
+        priority: 0.5,
+      },
+    ],
   ],
 };
 
