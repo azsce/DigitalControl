@@ -62,6 +62,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -154,17 +158,6 @@ const config: Config = {
         "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous",
     },
-  ],
-
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        id: 'default',
-        changefreq: 'weekly',
-        priority: 0.5,
-      },
-    ],
   ],
 };
 
