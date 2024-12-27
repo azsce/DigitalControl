@@ -1,6 +1,6 @@
 ---
-id: quantization_error
-title: Quantization Error and Resolution
+id: quantization
+title: Quantization and Resolution
 sidebar_position: 7
 ---
 
@@ -18,19 +18,21 @@ The number of distinct digital levels the A/D converter can output.
 
 ### Equations:
 
-- **Quantization Level:** $q = \frac{F.S.}{2^n}$
+- **Quantization Level:** $q = \frac{F.S}{2^n}$
 - **Maximum Quantization Error:** $\frac{q}{2}$
 - **Number of States/Levels:** $2^n$ (where $n$ is the number of bits)
-- **Maximum Analog Input:** $\left(2^n - 1\right) \times \frac{q}{2} + \frac{q}{2}$
+- **Maximum Analog Input:** $\frac{2^n - 1}{2^n} \cdot {F.S} + \frac{q}{2} = \left(2^n - 1\right) \cdot {q} + \frac{q}{2}$
 
-### Example:
+### Example1:
 An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 
 - Resolution: $2^4 = 16$ levels
 - Quantization Level:  $\frac{10V}{16} = 0.625V$
 - Maximum Quantization Error: $\frac{0.625V}{2} = 0.3125V$
 
-### Example 1: Quantization Levels and Error
+---
+
+### Example 2: Quantization Levels and Error
 
 **Problem:** Determine the quantization levels of a continuous signal with a range of ±10 volts, passing through a 4-bit A/D converter.
 
@@ -42,19 +44,23 @@ An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 
 3. **Quantization Error:** The maximum quantization error is $\frac{q}{2} = \frac{1.25 V}{2} = 0.625 V$.
 
-### Example 2: Maximum Input and Output
+---
 
-**Problem:** For the same setup as in Example 1, determine the maximum analog signal that can be converted and the maximum digital output.
+### Example 3: Maximum Input and Output
+
+**Problem:** For the same setup as in Example 2, determine the maximum analog signal that can be converted and the maximum digital output.
 
 **Solution:**
 
 1. **Maximum Analog Signal:** The maximum analog input that can be correctly converted is calculated as:
 
-   $\left(\frac{2^n - 1}{2^n}\right) \times F.S. + \frac{q}{2} = \left(\frac{16 - 1}{16}\right) \times 20 V + 0.625 V = 19.375 + 0.625 = 20V$
+   $\left(\frac{2^n - 1}{2^n}\right) \times F.S. + \frac{q}{2} = \left(\frac{16 - 1}{16}\right) \times 20 V + 0.625 V = 18.75 + 0.625 = 19.375V$
    
 2. **Maximum Digital Signal:** The maximum digital signal is represented by all bits set to '1'. In our 4-bit converter, the maximum digital signal is 1111.
 
-### Example 3: Signal Conversion
+---
+
+### Example 4: Signal Conversion
 
 **Problem:** What is the binary representation of a +5.325 volt signal input to a 3-bit A/D converter with a full-scale range of 20 volts?
 
