@@ -57,3 +57,37 @@ details > summary {
 details.alert--info{
   --ifm-alert-border-color: var(--details-border);
 }
+
+/* Fix for math expressions getting cropped */
+.math-display, .katex-display {
+  overflow: auto hidden;
+  padding: 0.5rem 0;
+}
+
+.katex {
+  font-size: 1em !important;
+  line-height: 1.5;
+  padding: 0.25em 0;
+}
+
+.katex .base {
+  margin: 0.25em 0;
+}
+
+/* Specific fix for superscript */
+.katex .supsubsup {
+  font-size: 85%;
+  line-height: 1.2;
+  vertical-align: 0.5em;
+}
+
+/* Ensure inline math has enough vertical space */
+.math.math-inline {
+  padding: 0 0.25em;
+}
+
+/* Additional spacing for math in mermaid diagrams */
+.mermaid .label foreignObject {
+  overflow: visible;
+  line-height: 1.5;
+}
