@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import CustomLayout from 'src/components/CustomLayout';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -44,6 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: "https://github.com/azsce/DigitalControl/tree/main/",
+          docItemComponent: CustomLayout,
         },
         blog: {
           showReadingTime: true,
@@ -147,6 +149,11 @@ const config: Config = {
           curve: 'basis'
         }
       },
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
     },
   } satisfies Preset.ThemeConfig,
 
