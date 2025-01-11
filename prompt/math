@@ -22,3 +22,6 @@ remarkPlugins: [require('remark-math')],
 rehypePlugins: [require('rehype-katex')]
 
 Please modify the mathematical expressions in my document to follow these conventions while preserving the rest of the content.
+
+
+
