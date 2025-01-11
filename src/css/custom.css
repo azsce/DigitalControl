@@ -91,3 +91,22 @@ details.alert--info{
   overflow: visible;
   line-height: 1.5;
 }
+
+
+
+
+.responsive-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.responsive-table {
+  width: 100%;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .responsive-table {
+    width: 45%;
+  }
+}

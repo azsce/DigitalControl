@@ -48,7 +48,7 @@ An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 
 ### Example 3: Maximum Input and Output
 
-**Problem:** For the same setup as in Example 2, determine the maximum analog signal that can be converted and the maximum digital output.
+<!-- **Problem:** For the same setup as in Example 2, determine the maximum analog signal that can be converted and the maximum digital output.
 
 **Solution:**
 
@@ -56,7 +56,7 @@ An A/D converter with a 4-bit capacity and a full scale of 10 volts would have:
 
    $\left(\frac{2^n - 1}{2^n}\right) \times F.S. + \frac{q}{2} = \left(\frac{16 - 1}{16}\right) \times 20 V + 0.625 V = 18.75 + 0.625 = 19.375V$
    
-2. **Maximum Digital Signal:** The maximum digital signal is represented by all bits set to '1'. In our 4-bit converter, the maximum digital signal is 1111.
+2. **Maximum Digital Signal:** The maximum digital signal is represented by all bits set to '1'. In our 4-bit converter, the maximum digital signal is 1111. -->
 
 ---
 
